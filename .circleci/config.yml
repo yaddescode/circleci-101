@@ -20,10 +20,9 @@ jobs:
        - image: circleci/ruby:2.4.1
      steps:
        - checkout
-       - run: echo "A second hello"
+       - run: echo "A second hello!"
        - attach_workspace:
          at: my_workspace
-         
        - run: |
           if [[ $(cat my_workspace/echo-output) == "Trying out workspaces" ]]; then
             echo "It worked!";
