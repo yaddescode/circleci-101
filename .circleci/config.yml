@@ -6,8 +6,9 @@ jobs:
      steps:
        - checkout
        - run: echo "A first hello"
-       - run: echo "i am in `pwd`"
+       - run: echo "i am in " `pwd`
        - run: mkdir -p my_workspace 
+       - run: ls -la; pwd;
        - run: echo "Trying out workspaces" > my_workspace/echo-output
        - persist_to_workspace:
           # Must be an absolute path, or relative path from working_directory
